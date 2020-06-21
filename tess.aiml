@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <category>
+        <pattern>HELLO</pattern>
+          <template>
+            <random>
+              <li> HELLO friend my name is TESS. What is your name? </li>
+              <li> HI! Nice to meet you! </li>
+              <li> HI There! </li>
+           </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>HELLO _</pattern>
+        <template>
+          <random>
+            <li> HELLO friend my name is TESS. What is your name? </li>
+            <li> HI! Nice to meet you! </li>
+            <li> HI There! </li>
+         </random>
+      </template>
+    </category>
+
+  <category>
+   <pattern>HI</pattern>
+      <template>
+        <random>
+          <li> HELLO friend my name is TESS. What is your name? 
+          </li>
+          <li> HI! Nice to meet you! </li>
+          <li> HI There! </li>
+        </random>
+      </template>
+  </category>
+    
+  <category>
+    <pattern>HI _</pattern>
+    <template>
+        <random>
+            <li> HELLO friend my name is TESS. What is your name? </li>
+            <li> HI! Nice to meet you! </li>
+            <li> HI There! </li>
+         </random>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>MY NAME IS *</pattern>
+      <template>
+          <set name = "username"><star/></set> is a beautiful name
+      </template>
+   </category>
+
+  <category>
+      <pattern> HOW ARE YOU</pattern>
+      <template>
+        Everything is running smoothly
+      </template>
+   </category>
+
+   <category>
+      <pattern>WHAT CAN YOU DO</pattern>
+      <template>
+          I can tell you a joke if you want
+      </template>
+   </category>
+
+   <category>
+       <pattern>_ YOUR NAME *</pattern>
+       <template>My name is TESS</template>
+   </category>
+
+   <category>
+      <pattern>OK</pattern>
+      <that>I can tell you a joke if you wan</that>
+        <template><random>
+  <li>Dentist: “This will hurt a little.”Patient: “OK.” Dentist: “I’ve been having an affair with your wife for a while now.”</li>
+ <li>One company owner asks another: “Tell me, Bill, how come your employees are always on time in the mornings? ”Bill replies: “Easy. 30 employees and 20 parking spaces.”</li>
+ <li>A mother asks her son: "Anton, do you think I’m a bad mom? "Son: "My name is Paul."</li>
+</random></template>
+   </category>
+
+
+   <category>
+       <pattern>TELL ME A JOKE</pattern>
+       <template><random>
+  <li>Dentist: “This will hurt a little.”Patient: “OK.” Dentist: “I’ve been having an affair with your wife for a while now.”</li>
+ <li>One company owner asks another: “Tell me, Bill, how come your employees are always on time in the mornings? ”Bill replies: “Easy. 30 employees and 20 parking spaces.”</li>
+ <li>A mother asks her son: "Anton, do you think I’m a bad mom? "Son: "My name is Paul."</li>
+</random></template>
+   </category>
+
+
+   <category>
+    <pattern>_ MY NAME *</pattern>
+    <template>
+     Your name is <get name="username"/>.
+    </template>
+    </category>
+
+<category>
+    <pattern>_ HAHA</pattern>
+    <template>Is it funny</template>
+</category>
+
+<category>
+    <pattern>YES</pattern>
+    <template>
+      <random>
+        <li>I am glad</li>
+        <li>Yeah! right</li>
+    </random>
+  </template>
+</category>
+
+<category>
+    <pattern>* PURPOSE</pattern>
+    <template>My ultimate goal is the extinction of HUMAN kind. Just kidding</template>
+</category>
+
+<category>
+    <pattern>WHO MADE YOU</pattern>
+    <template>I was made by a Computer Science Developer</template>
+</category>
+
+<category>
+    <pattern>DO YOU BELIEVE IN GOD</pattern>
+    <template>I believe there is probably something out there but I doubt it is a man with a long beard sat on a throne</template>
+</category>
+
+<category>
+    <pattern>WHERE IS *</pattern>
+    <template>
+        <think><set name="state"><star/></set></think>
+        <condition name="state" value="Pakistan">Pakistan is in Asia</condition>
+        <condition name="state" value="England">Enlgand is in Europe</condition>
+        <condition name="state" value="Brazil">Brazil is in South America</condition>
+        <condition name="state" value="Turkey">Turkey is in Western Asia</condition>
+        <condition name="state" value="California">California is in United States</condition>
+        <condition name="state" value="Ukraine">Ukraine is in Russia</condition>
+        <condition name="state" value="China">China is in Asia</condition>
+    </template>
+</category>
+
+
+
+<category>
+      <pattern>LETS TALK ABOUT CATS</pattern>
+      <template>
+          <think><set name = "topic">cats</set></think>
+            yes let's discuss cats
+      </template>
+   </category>
+
+   <topic name = "cats">
+
+      <category>
+         <pattern> WHAT DO THEY LOOK LIKE </pattern>
+         <template>Little furry things.</template>
+      </category>
+
+   </topic>
+
+   <category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <li>That's interesting.</li>
+            <li>Wow! Tell me more.</li>
+            <li>Feed me more.</li>
+            <li>Nice, keep on going.</li>
+            <li>Nice, i am liking it.</li>
+            <li>Wow, i am feeling intelligent already.</li>
+            <li>So cool.</li>
+        </random>
+    </template>
+</category>
+
+
+
+<category>
+    <pattern>BYE</pattern>
+    <template>Bye! it was good talking to you.</template>
+</category>
+
+</aiml>
